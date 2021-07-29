@@ -7,7 +7,13 @@
 
 body {
     font-family: 'Roboto', helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
 }
+
+
 
 #add{
     background-color: #209554;
@@ -30,9 +36,54 @@ body {
     border: solid rgba(00, 00, 00, 0.2) 1px;
 }
 
-input{
+#input{
     width: 30em;
     height: 2em;
     margin-top: 0.5em;
     margin-bottom: 0.2em;
+    border:solid 2px #dadada ;
+    border-radius: 4px;
+    padding: 10px;
+    color: lightslategray;
+}
+
+input:focus {
+    border: 1px  solid ;
+    box-shadow: 0 0 10px #9ecaed;
+
+}
+#add:focus {
+    border: 2px  solid ;
+    box-shadow: 0 0 20px #9ecaed;
+
+}
+#complete:focus {
+    border: 0.5px  inset ;
+    box-shadow: 0 0 20px #9ecaed;
+
+}
+#clear:focus {
+    border: 2px  solid ;
+    box-shadow: 0 0 20px #9ecaed;
+
+}
+
+.todo {
+    padding: 10px;
+    list-style: none;
+    border: 1px solid lightslategray;
+    transition: 0.5s ease; 
+}
+
+.todo:hover {
+transform: scale(1.1);
+cursor: pointer;}
+
+
+.complete-todo {
+    padding: 10px;
+    list-style: none;
+    border: 1px solid lightslategray;
+    opacity: 0.5;
+    text-decoration: line-through;
 }
